@@ -12,7 +12,7 @@ jobs:
     name: Deploy to Droplet
     steps:
       - name: Connect with SSH and Deploy
-        uses: appleboy/ssh-action@v0.1.4
+        uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
