@@ -1,0 +1,28 @@
+name: Build & Deploy Development
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy_to_droplet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    name: Deploy to Droplet
+    steps:
+      - name: Connect with SSH and Deploy
+        uses: appleboy/ssh-action@v0.1.4
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            cd /var/www/docker/smith
+            git pull origin develop
+            docker-compose stop microservicio_smith_api
+            docker rm -f microservicio_smith
+            docker-compose build microservicio_smith_api
+            docker-compose up -d microservicio_smith_api
+            docker ps -a

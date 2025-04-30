@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  microservicio_smith_api:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: microservicio_smith
+    image: smith/backend:latest
+    restart: on-failure
+    ports:
+      - "5173:5173"
+    networks:
+      - mc_network
+
+networks:
+  mc_network:
+    driver: bridge
