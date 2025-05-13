@@ -1,150 +1,274 @@
-import React from 'react';
+import React from "react";
+import { Card, CardContent } from "../components/ui/card";
+import { Separator } from "../components/ui/separator";
 
 const AboutPage: React.FC = () => {
+  const navLinks = ["About me", "Portfolio", "Contact me", "Blog"];
+
+  // Skills data for the bar chart
+  const skillsData = [
+    { name: "Web Design", level: "Master", height: "273px", color: "#f9bf3b" },
+    {
+      name: "Graphic Design",
+      level: "Master",
+      height: "273px",
+      color: "#ff6b6b",
+    },
+    {
+      name: "Community\nManager",
+      level: "Proficient",
+      height: "201px",
+      color: "#f79a3c",
+    },
+    { name: "Entrepeneur", level: "Expert", height: "231px", color: "#202124" },
+    { name: "Gym", level: "Proficient", height: "201px", color: "#0048ff" },
+    {
+      name: "Video Games",
+      level: "Familiar",
+      height: "132px",
+      color: "#ffe100",
+    },
+  ];
+
+  // Designer skills data
+  const designerSkills = [
+    "UX design",
+    "UI design",
+    "Marketing",
+    "Community manager",
+    "Web design",
+    "Graphic design",
+    "IT Support",
+    "HTML / CSS",
+  ];
+
+  // Entrepreneur skills data
+  const entrepreneurSkills = [
+    "Running businesses",
+    "Delivery APP 50K+ Downloads",
+    "Large format printing company",
+    "Ice cream company",
+    "Youtuber +50K Suscribers",
+    "E-commerce",
+  ];
+
+  // Social media icons data
+  const socialIcons = [
+    { src: "/vector.svg", alt: "Vector" },
+    { src: "/vector-7.svg", alt: "Vector" },
+    { src: "/vector-1.svg", alt: "Vector", hasBackground: true },
+    { src: "/instagram-logo-2016-1.svg", alt: "Instagram logo" },
+    { src: "/vector-2.svg", alt: "Vector" },
+  ];
+
+  // Footer social icons data
+  const footerSocialIcons = [
+    { src: "/vector.svg", alt: "Vector" },
+    { src: "/vector-7.svg", alt: "Vector" },
+    { src: "/vector-1.svg", alt: "Vector", hasBackground: true },
+    { src: "/vector-3.svg", alt: "Vector" },
+    { src: "/linkedin-logo-1.svg", alt: "Linkedin logo" },
+  ];
   return (
-    <div className="bg-white">
-      {/* Profile Section */}
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <h1 className="text-3xl font-bold mb-6">About me</h1>
-        
-        <div className="flex flex-col md:flex-row gap-12 mb-12">
-          <div className="w-full md:w-2/3">
-            <p className="text-gray-800 mb-4">I'm a UX designer based in Perth, Australia.</p>
-            <p className="text-gray-800">
-              Since 2015, I enjoy developing intuitive interfaces basically. I love making people's lives easy. 
-              When I'm not designing, you'll find me cooking, thinking a business idea, at the gym or playing video games.
-            </p>
-          </div>
-          
-          <div className="w-full md:w-1/3">
-            <img 
-              src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg" 
-              alt="Profile" 
-              className="w-full rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
-
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-5 gap-4 mb-16">
-          <img 
-            src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg" 
-            alt="Gallery 1" 
-            className="w-full h-24 object-cover rounded-lg"
-          />
-          <img 
-            src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg" 
-            alt="Gallery 2" 
-            className="w-full h-24 object-cover rounded-lg"
-          />
-          <img 
-            src="https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg" 
-            alt="Gallery 3" 
-            className="w-full h-24 object-cover rounded-lg"
-          />
-          <img 
-            src="https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg" 
-            alt="Gallery 4" 
-            className="w-full h-24 object-cover rounded-lg"
-          />
-          <div className="w-full h-24 bg-gray-100 rounded-lg"></div>
-        </div>
-
-        {/* Designer & Entrepreneur Split */}
-        <div className="flex flex-col md:flex-row gap-12 mb-16">
-          <div className="w-full md:w-1/2">
-            <h2 className="text-2xl font-bold mb-4">Part Designer</h2>
-            <ul className="space-y-2">
-              <li>UX design</li>
-              <li>UI design</li>
-              <li>Marketing</li>
-              <li>Community manager</li>
-              <li>Web design</li>
-              <li>Graphic design</li>
-              <li>IT Support</li>
-              <li>HTML / CSS</li>
-            </ul>
-          </div>
-          
-          <div className="w-full md:w-1/2">
-            <h2 className="text-2xl font-bold mb-4">Part Entrepreneur</h2>
-            <ul className="space-y-2">
-              <li>Running businesses</li>
-              <li>Delivery app 50k+ Downloads</li>
-              <li>Ice cream and printing company</li>
-              <li>Ice cream company</li>
-              <li>Youtube +50k Subscribers</li>
-              <li>E-commerce</li>
-            </ul>
-          </div>
-        </div>
-
+    <div className="bg-white flex flex-row justify-center w-full">
+      <div className="bg-white overflow-hidden w-[1440px] h-[3025px] relative">
         {/* Skills Section */}
-        <div>
-          <h2 className="text-2xl font-bold mb-6">Skills</h2>
-          
-          <div className="space-y-6">
-            <div>
-              <div className="flex justify-between mb-2">
-                <span>Web Design</span>
-                <span>Expert</span>
+        <Card className="absolute w-[1441px] h-[645px] top-[1494px] -left-px shadow-[0px_4px_4px_#00000040]">
+          <CardContent className="p-0 h-full relative">
+            <h2 className="absolute w-[243px] top-[38px] left-[600px] font-h2 font-[number:var(--h2-font-weight)] text-black text-[length:var(--h2-font-size)] tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)]">
+              Skills
+            </h2>
+
+            <div className="absolute w-[1262px] h-[449px] top-[126px] left-[101px]">
+              {/* Skill level labels */}
+              <div className="absolute w-[150px] top-0 left-0 font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
+                Master
               </div>
-              <div className="w-full bg-gray-200 h-2 rounded-full">
-                <div className="bg-yellow-400 h-2 rounded-full" style={{ width: '80%' }}></div>
+              <div className="absolute w-[150px] top-[72px] left-0 font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
+                Expert
               </div>
+              <div className="absolute w-[150px] top-[43px] left-0 font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
+                Proficient
+              </div>
+              <div className="absolute w-[150px] top-[115px] left-0 font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
+                Familiar
+              </div>
+              <div className="absolute w-[150px] top-[187px] left-0 font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
+                Beginner
+              </div>
+
+              {/* Horizontal lines */}
+              <Separator className="absolute w-[1240px] h-0.5 top-[29px] left-0" />
+              <Separator className="absolute w-[1240px] h-0.5 top-0 left-0" />
+              <Separator className="absolute w-[1240px] h-0.5 top-36 left-0" />
+              <Separator className="absolute w-[1240px] h-0.5 top-[216px] left-0" />
+              <Separator className="absolute w-[1240px] h-0.5 top-[72px] left-0" />
+
+              {/* Skill bars */}
+              <div className="absolute w-[1240px] h-[277px] top-[101px] left-0">
+                {skillsData.map((skill, index) => (
+                  <div
+                    key={index}
+                    className={`absolute w-[124px] h-[${skill.height}] top-${
+                      skill.level === "Master"
+                        ? "px"
+                        : skill.level === "Expert"
+                        ? "[43px]"
+                        : skill.level === "Proficient"
+                        ? "[73px]"
+                        : "[145px]"
+                    } left-[${181 + index * 179}px] bg-[${
+                      skill.color
+                    }] rounded-[9px_9px_0px_0px]`}
+                    style={{
+                      height: skill.height,
+                      backgroundColor: skill.color,
+                      left: `${181 + index * 179}px`,
+                      top:
+                        skill.level === "Master"
+                          ? "1px"
+                          : skill.level === "Expert"
+                          ? "43px"
+                          : skill.level === "Proficient"
+                          ? "73px"
+                          : "145px",
+                    }}
+                  />
+                ))}
+              </div>
+
+              {/* Skill names */}
+              {skillsData.map((skill, index) => (
+                <div
+                  key={index}
+                  className={`absolute top-[395px] left-[${
+                    181 + index * 179
+                  }px] font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] ${
+                    skill.name.includes("\n") ? "text-center" : ""
+                  } tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]`}
+                  style={{ left: `${181 + index * 179}px` }}
+                >
+                  {skill.name.includes("\n") ? (
+                    <>
+                      Community
+                      <br />
+                      Manager
+                    </>
+                  ) : (
+                    skill.name
+                  )}
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Designer/Entrepreneur Section */}
+        <Card className="absolute w-[1441px] h-[645px] top-[845px] -left-px shadow-[0px_4px_4px_#00000040]">
+          <CardContent className="p-0 h-full relative">
+            <h2 className="top-[113px] left-[99px] absolute font-h2 font-[number:var(--h2-font-weight)] text-black text-[length:var(--h2-font-size)] tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)]">
+              Part <br />
+              Designer
+            </h2>
+
+            <h2 className="w-48 top-[122px] left-[1034px] absolute font-h2 font-[number:var(--h2-font-weight)] text-black text-[length:var(--h2-font-size)] tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)]">
+              Part Entrepeneur
+            </h2>
+
+            <div className="absolute top-[249px] left-[101px] font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
+              {designerSkills.map((skill, index) => (
+                <React.Fragment key={index}>
+                  {skill}
+                  <br />
+                </React.Fragment>
+              ))}
             </div>
 
-            <div>
-              <div className="flex justify-between mb-2">
-                <span>Graphic Design</span>
-                <span>Expert</span>
-              </div>
-              <div className="w-full bg-gray-200 h-2 rounded-full">
-                <div className="bg-red-400 h-2 rounded-full" style={{ width: '80%' }}></div>
-              </div>
+            <div className="absolute top-[249px] left-[1034px] font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
+              {entrepreneurSkills.map((skill, index) => (
+                <React.Fragment key={index}>
+                  {skill}
+                  <br />
+                </React.Fragment>
+              ))}
             </div>
 
-            <div>
-              <div className="flex justify-between mb-2">
-                <span>Community Manager</span>
-                <span>Proficient</span>
-              </div>
-              <div className="w-full bg-gray-200 h-2 rounded-full">
-                <div className="bg-orange-400 h-2 rounded-full" style={{ width: '60%' }}></div>
-              </div>
+            {/* Venn diagram */}
+            <img
+              className="absolute w-[275px] h-[388px] top-[88px] left-[657px]"
+              alt="Ellipse"
+              src="/ellipse-3.svg"
+            />
+            <img
+              className="absolute w-[385px] h-[446px] top-[102px] left-[467px]"
+              alt="Ellipse"
+              src="/ellipse-4.svg"
+            />
+          </CardContent>
+        </Card>
+
+        {/* About Me Section */}
+        <Card className="absolute w-[1441px] h-[747px] top-[98px] -left-px shadow-[0px_4px_4px_#00000040]">
+          <CardContent className="p-0 h-full relative">
+            <h2 className="absolute w-[281px] top-[124px] left-[101px] [font-family:'Amaranth',Helvetica] font-bold text-black text-[40px] tracking-[0] leading-[normal] whitespace-nowrap">
+              About me
+            </h2>
+
+            <p className="absolute w-[625px] top-[214px] left-[101px] font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
+              I&#39;m a UX designer based in Perth, Australia.
+              <br />
+              <br />
+              Since 2019, I enjoy developing intuitive interfaces basically I
+              love making people&#39;s lives easy. When I&#39;m not designing,
+              you&#39;ll find me cooking, thinking a business idea, at the gym
+              or playing video games.
+            </p>
+
+            {/* Profile image */}
+            <div className="absolute w-[469px] h-[355px] top-[125px] left-[846px] rotate-180">
+              <img
+                className="absolute w-[477px] h-[363px] -top-2 -left-1 -rotate-180 object-cover"
+                alt="Image"
+                src="/image-1.png"
+              />
             </div>
 
-            <div>
-              <div className="flex justify-between mb-2">
-                <span>Entrepreneur</span>
-                <span>Expert</span>
-              </div>
-              <div className="w-full bg-gray-200 h-2 rounded-full">
-                <div className="bg-black h-2 rounded-full" style={{ width: '80%' }}></div>
-              </div>
+            {/* Gallery images */}
+            <div className="absolute w-[140px] h-[140px] top-[538px] left-[101px] rotate-180">
+              <img
+                className="absolute w-[148px] h-[148px] -top-2 -left-1 -rotate-180 object-cover"
+                alt="Image"
+                src="/image-1.png"
+              />
             </div>
+            <div className="absolute w-[140px] h-[140px] top-[538px] left-[312px] rotate-180">
+              <img
+                className="absolute w-[148px] h-[148px] -top-2 -left-1 -rotate-180 object-cover"
+                alt="Image"
+                src="/image-2.png"
+              />
+            </div>
+            <div className="absolute w-[140px] h-[140px] top-[538px] left-[525px] rotate-180">
+              <img
+                className="absolute w-[148px] h-[148px] -top-2 -left-1 -rotate-180 object-cover"
+                alt="Image"
+                src="/image-3.png"
+              />
+            </div>
+            <div className="absolute w-[140px] h-[140px] top-[538px] left-[740px] rotate-180">
+              <img
+                className="absolute w-[148px] h-[148px] -top-2 -left-1 -rotate-180 object-cover"
+                alt="Image"
+                src="/image-4.png"
+              />
+            </div>
+            <div className="absolute w-[140px] h-[140px] top-[538px] left-[953px] rotate-180">
+              <div className="h-[140px] bg-[#c4c4c4] rounded-[20px] rotate-180 shadow-[0px_4px_4px_#00000040]" />
+            </div>
+          </CardContent>
+        </Card>
 
-            <div>
-              <div className="flex justify-between mb-2">
-                <span>Gym</span>
-                <span>Proficient</span>
-              </div>
-              <div className="w-full bg-gray-200 h-2 rounded-full">
-                <div className="bg-blue-500 h-2 rounded-full" style={{ width: '60%' }}></div>
-              </div>
-            </div>
-
-            <div>
-              <div className="flex justify-between mb-2">
-                <span>Video Games</span>
-                <span>Familiar</span>
-              </div>
-              <div className="w-full bg-gray-200 h-2 rounded-full">
-                <div className="bg-yellow-300 h-2 rounded-full" style={{ width: '40%' }}></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Header */}
       </div>
     </div>
   );
