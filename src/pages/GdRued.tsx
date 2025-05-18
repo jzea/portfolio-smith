@@ -17,7 +17,7 @@ export const GdRued = (): JSX.Element => {
         <img
           className="w-full h-[423px] object-cover"
           alt="Banner"
-          src="/117833779-609757703263924-2886242693410465874-n.png"
+          src="/candy.png"
         />
 
         {/* Portfolio Section */}

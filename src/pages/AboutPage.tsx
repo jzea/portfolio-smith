@@ -3,8 +3,6 @@ import { Card, CardContent } from "../components/ui/card";
 import { Separator } from "../components/ui/separator";
 
 const AboutPage: React.FC = () => {
-  const navLinks = ["About me", "Portfolio", "Contact me", "Blog"];
-
   // Skills data for the bar chart
   const skillsData = [
     { name: "Web Design", level: "Master", height: "273px", color: "#f9bf3b" },
@@ -52,23 +50,6 @@ const AboutPage: React.FC = () => {
     "E-commerce",
   ];
 
-  // Social media icons data
-  const socialIcons = [
-    { src: "/vector.svg", alt: "Vector" },
-    { src: "/vector-7.svg", alt: "Vector" },
-    { src: "/vector-1.svg", alt: "Vector", hasBackground: true },
-    { src: "/instagram-logo-2016-1.svg", alt: "Instagram logo" },
-    { src: "/vector-2.svg", alt: "Vector" },
-  ];
-
-  // Footer social icons data
-  const footerSocialIcons = [
-    { src: "/vector.svg", alt: "Vector" },
-    { src: "/vector-7.svg", alt: "Vector" },
-    { src: "/vector-1.svg", alt: "Vector", hasBackground: true },
-    { src: "/vector-3.svg", alt: "Vector" },
-    { src: "/linkedin-logo-1.svg", alt: "Linkedin logo" },
-  ];
   return (
     <div className="bg-white flex flex-row justify-center w-full">
       <div className="bg-white overflow-hidden w-[1440px] h-[3025px] relative">
@@ -238,28 +219,28 @@ const AboutPage: React.FC = () => {
               <img
                 className="absolute w-[148px] h-[148px] -top-2 -left-1 -rotate-180 object-cover"
                 alt="Image"
-                src="/image-1.png"
+                src="/4.jpg"
               />
             </div>
             <div className="absolute w-[140px] h-[140px] top-[538px] left-[312px] rotate-180">
               <img
                 className="absolute w-[148px] h-[148px] -top-2 -left-1 -rotate-180 object-cover"
                 alt="Image"
-                src="/image-2.png"
+                src="/3.jpg"
               />
             </div>
             <div className="absolute w-[140px] h-[140px] top-[538px] left-[525px] rotate-180">
               <img
                 className="absolute w-[148px] h-[148px] -top-2 -left-1 -rotate-180 object-cover"
                 alt="Image"
-                src="/image-3.png"
+                src="/2.jpg"
               />
             </div>
             <div className="absolute w-[140px] h-[140px] top-[538px] left-[740px] rotate-180">
               <img
                 className="absolute w-[148px] h-[148px] -top-2 -left-1 -rotate-180 object-cover"
                 alt="Image"
-                src="/image-4.png"
+                src="/1.jpg"
               />
             </div>
             <div className="absolute w-[140px] h-[140px] top-[538px] left-[953px] rotate-180">

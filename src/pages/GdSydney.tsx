@@ -1,5 +1,3 @@
-import React from "react";
-import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 
 export const GdSydney = (): JSX.Element => {
@@ -24,11 +22,7 @@ export const GdSydney = (): JSX.Element => {
     <div className="bg-white flex flex-row justify-center w-full">
       <div className="bg-white overflow-hidden w-[1440px] relative">
         {/* Hero Image */}
-        <img
-          className="w-full h-[423px] object-cover"
-          alt="Element"
-          src="/117833779-609757703263924-2886242693410465874-n.png"
-        />
+        <img className="w-full h-[400px] " alt="Element" src="/sydney.png" />
 
         {/* Portfolio Images Row */}
         <div className="flex justify-center gap-[39px] mt-[105px]">

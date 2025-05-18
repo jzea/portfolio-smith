@@ -1,83 +1,7 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
-import { Card, CardContent } from "../components/ui/card";
 
 export const Desktop = (): JSX.Element => {
-  // Social media icons data for reuse
-  const socialIcons = [
-    { src: "/vector-42.svg", alt: "Vector" },
-    { src: "/vector-33.svg", alt: "Vector" },
-    {
-      type: "container",
-      bgColor: "bg-black",
-      content: { src: "/vector-44.svg", alt: "Vector" },
-    },
-    { src: "/vector-32.svg", alt: "Vector" },
-    { src: "/linkedin-logo-1.svg", alt: "Linkedin logo" },
-  ];
-
-  // Header social icons (slightly different from footer)
-  const headerSocialIcons = [
-    { src: "/vector-42.svg", alt: "Vector" },
-    { src: "/vector-33.svg", alt: "Vector" },
-    {
-      type: "container",
-      bgColor: "bg-black",
-      content: { src: "/vector-44.svg", alt: "Vector" },
-    },
-    { src: "/instagram-logo-2016-1.svg", alt: "Instagram logo" },
-    { src: "/vector-47.svg", alt: "Vector" },
-  ];
-
-  // Navigation links
-  const navLinks = ["About me", "Portfolio", "Contact me", "Blog"];
-
-  // Portfolio sections data
-  const portfolioSections = [
-    {
-      bgColor: "bg-[#f9bf3b]",
-      title: "UX Design\nPortfolio",
-      description:
-        "It is a website about my UX designs. It\ncontains my projects",
-      image: "/phone-food-1.png",
-      imagePosition: "right",
-      textColor: "text-white",
-      descriptionColor: "text-black",
-      top: "top-[611px]",
-      descTop: "top-[767px]",
-      buttonTop: "top-[836px]",
-      leftImage: "/image-11.png",
-      rightImage: "/image.png",
-    },
-    {
-      bgColor: "bg-[#ff6b6b]",
-      title: "Graphic Designs\nPortfolio",
-      description:
-        "It is a website about my UX designs. It\ncontains my projects",
-      imageComponent: "graphic-design-illustration",
-      imagePosition: "left",
-      textColor: "text-white",
-      descriptionColor: "text-black",
-      top: "top-[120px]",
-      descTop: "top-[263px]",
-      buttonTop: "top-[332px]",
-      buttonLeft: "left-[873px]",
-    },
-    {
-      bgColor: "bg-[#202124]",
-      title: "Entrepeneur\nResume",
-      description:
-        "It is a website about my UX designs. It\ncontains my projects",
-      imageComponent: "entrepreneur-illustration",
-      imagePosition: "right",
-      textColor: "text-white",
-      descriptionColor: "text-white",
-      top: "top-[634px]",
-      descTop: "top-[776px]",
-      buttonTop: "top-[845px]",
-    },
-  ];
-
   return (
     <div className="bg-white flex flex-row justify-center w-full">
       <div className="bg-white overflow-hidden w-[1440px] h-[2368px] relative">
@@ -101,7 +25,7 @@ export const Desktop = (): JSX.Element => {
           <img
             className="absolute w-[723px] h-[484px] top-0 left-[717px]"
             alt="Image"
-            src="/image.png"
+            src="/face.png"
           />
           <img
             className="absolute w-[725px] h-[484px] top-0 left-0"
@@ -109,14 +33,16 @@ export const Desktop = (): JSX.Element => {
             src="/image-11.png"
           />
           <div className="absolute w-[229px] h-[50px] top-[836px] left-[68px]">
-            <Button
-              variant="outline"
-              className="relative w-[230px] h-[53px] -top-0.5 -left-0.5 rounded-[10px] border-[3px] border-solid border-white"
-            >
-              <span className="absolute top-2.5 left-[52px] font-h4 font-[number:var(--h4-font-weight)] text-white text-[length:var(--h4-font-size)] text-center tracking-[var(--h4-letter-spacing)] leading-[var(--h4-line-height)] [font-style:var(--h4-font-style)]">
-                Check it out
-              </span>
-            </Button>
+            <Link to="/ux-portfolio">
+              <Button
+                variant="outline"
+                className="relative w-[230px] h-[53px] -top-0.5 -left-0.5 rounded-[10px] border-[3px] border-solid border-white"
+              >
+                <span className="absolute top-2.5 left-[52px] font-h4 font-[number:var(--h4-font-weight)] text-white text-[length:var(--h4-font-size)] text-center tracking-[var(--h4-letter-spacing)] leading-[var(--h4-line-height)] [font-style:var(--h4-font-style)]">
+                  Check it out
+                </span>
+              </Button>
+            </Link>
           </div>
         </div>
         {/* Second and Third Sections */}
@@ -163,24 +89,28 @@ export const Desktop = (): JSX.Element => {
 
           {/* Buttons for Graphic Design and Entrepreneur sections */}
           <div className="absolute w-[229px] h-[50px] top-[332px] left-[873px]">
-            <Button
-              variant="outline"
-              className="relative w-[230px] h-[53px] -top-0.5 -left-0.5 rounded-[10px] border-[3px] border-solid border-white"
-            >
-              <span className="absolute top-2.5 left-[52px] font-h4 font-[number:var(--h4-font-weight)] text-white text-[length:var(--h4-font-size)] text-center tracking-[var(--h4-letter-spacing)] leading-[var(--h4-line-height)] [font-style:var(--h4-font-style)]">
-                Check it out
-              </span>
-            </Button>
+            <Link to="/portfolio">
+              <Button
+                variant="outline"
+                className="relative w-[230px] h-[53px] -top-0.5 -left-0.5 rounded-[10px] border-[3px] border-solid border-white"
+              >
+                <span className="absolute top-2.5 left-[52px] font-h4 font-[number:var(--h4-font-weight)] text-white text-[length:var(--h4-font-size)] text-center tracking-[var(--h4-letter-spacing)] leading-[var(--h4-line-height)] [font-style:var(--h4-font-style)]">
+                  Check it out
+                </span>
+              </Button>
+            </Link>
           </div>
           <div className="absolute w-[229px] h-[50px] top-[845px] left-[68px]">
-            <Button
-              variant="outline"
-              className="relative w-[230px] h-[53px] -top-0.5 -left-0.5 rounded-[10px] border-[3px] border-solid border-white"
-            >
-              <span className="absolute top-2.5 left-[52px] font-h4 font-[number:var(--h4-font-weight)] text-white text-[length:var(--h4-font-size)] text-center tracking-[var(--h4-letter-spacing)] leading-[var(--h4-line-height)] [font-style:var(--h4-font-style)]">
-                Check it out
-              </span>
-            </Button>
+            <Link to="/entrepeneur">
+              <Button
+                variant="outline"
+                className="relative w-[230px] h-[53px] -top-0.5 -left-0.5 rounded-[10px] border-[3px] border-solid border-white"
+              >
+                <span className="absolute top-2.5 left-[52px] font-h4 font-[number:var(--h4-font-weight)] text-white text-[length:var(--h4-font-size)] text-center tracking-[var(--h4-letter-spacing)] leading-[var(--h4-line-height)] [font-style:var(--h4-font-style)]">
+                  Check it out
+                </span>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

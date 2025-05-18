@@ -15,6 +15,12 @@ import { GdSmitocap } from "./pages/GdSmitocap";
 import { GdTentstacle } from "./pages/GdTentstacle";
 import { GdRued } from "./pages/GdRued";
 import { GdSydney } from "./pages/GdSydney";
+import Portfolio2Page from "./pages/Portfolio2Page";
+import Portfolio3Page from "./pages/Portfolio3Page";
+import { UxAayra } from "./pages/UxAayra";
+import { UxZpedidosWebY } from "./pages/UxZpedidosWebY";
+import { UxZrestaurant } from "./pages/UxZrestaurant";
+import { Entrepeneur } from "./pages/Entrepeneur";
 
 function App() {
   return (
@@ -35,6 +41,12 @@ function App() {
             <Route path="/portfolio/tentstacle" element={<GdTentstacle />} />
             <Route path="/portfolio/rudeglasses" element={<GdRued />} />
             <Route path="/portfolio/sydneyclothes" element={<GdSydney />} />
+            <Route path="/ux-portfolio" element={<Portfolio2Page />} />
+            <Route path="/ux-portfolio-zpedidos" element={<Portfolio3Page />} />
+            <Route path="/UxAayra" element={<UxAayra />} />
+            <Route path="/uxzpedidosweb" element={<UxZpedidosWebY />} />
+            <Route path="/uxzpedidosrestarant" element={<UxZrestaurant />} />
+            <Route path="/entrepeneur" element={<Entrepeneur />} />
           </Routes>
         </main>
         <Footer />

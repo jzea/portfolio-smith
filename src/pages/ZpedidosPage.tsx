@@ -143,11 +143,11 @@ const ZpedidosPage: React.FC = () => {
       alt: "Element",
     },
     {
-      src: "/138581044-724385348467825-607151593419644474-n.png",
+      src: "/scu.jpg",
       alt: "Element",
     },
     {
-      src: "/143195953-734769627429397-1252584000800748315-n.png",
+      src: "/scu2.jpg",
       alt: "Element",
     },
   ];

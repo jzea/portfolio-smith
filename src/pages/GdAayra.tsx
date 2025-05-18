@@ -16,7 +16,7 @@ export const GdAayra = (): JSX.Element => {
           <img
             className="w-full h-[423px]"
             alt="Background"
-            src="/background.png"
+            src="/fondoaira.png"
           />
         </section>
 
