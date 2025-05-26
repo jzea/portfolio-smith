@@ -30,7 +30,7 @@ export const Desktop = (): JSX.Element => {
           <img
             className="absolute w-[725px] h-[484px] top-0 left-0"
             alt="Image"
-            src="/image-11.png"
+            src="/headimage.jpg"
           />
           <div className="absolute w-[229px] h-[50px] top-[836px] left-[68px]">
             <Link to="/ux-portfolio">
