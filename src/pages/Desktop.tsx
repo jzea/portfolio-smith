@@ -9,9 +9,9 @@ export const Desktop = (): JSX.Element => {
         <div className="absolute w-[1441px] h-[961px] top-[94px] left-0">
           <div className="w-[1441px] h-[485px] top-[476px] bg-[#f9bf3b] rotate-180 shadow-[0px_4px_4px_#00000040] absolute left-0" />
           <img
-            className="absolute w-[357px] h-[436px] top-[501px] left-[779px] object-cover"
-            alt="Phone food"
-            src="/phone-food-1.png"
+            className="w-full h-[484px] object-cover"
+            alt="Image"
+            src="/Vector Smith Half designer half entrepeneur.png"
           />
           <div className="absolute top-[611px] left-[68px] font-h1 font-[number:var(--h1-font-weight)] text-white text-[length:var(--h1-font-size)] tracking-[var(--h1-letter-spacing)] leading-[var(--h1-line-height)] [font-style:var(--h1-font-style)]">
             UX Design
@@ -23,14 +23,9 @@ export const Desktop = (): JSX.Element => {
             contains my projects
           </div>
           <img
-            className="absolute w-[723px] h-[484px] top-0 left-[717px]"
-            alt="Image"
-            src="/face.png"
-          />
-          <img
-            className="absolute w-[725px] h-[484px] top-0 left-0"
-            alt="Image"
-            src="/headimage.jpg"
+            className="absolute w-[357px] h-[436px] top-[501px] left-[779px] object-cover"
+            alt="Phone food"
+            src="/phone-food-1.png"
           />
           <div className="absolute w-[229px] h-[50px] top-[836px] left-[68px]">
             <Link to="/ux-portfolio">
