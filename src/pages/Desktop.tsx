@@ -3,112 +3,143 @@ import { Button } from "../components/ui/button";
 
 export const Desktop = (): JSX.Element => {
   return (
-    <div className="bg-white flex flex-row justify-center w-full">
-      <div className="bg-white overflow-hidden w-[1440px] h-[2368px] relative">
-        {/* First Section - UX Design Portfolio */}
-        <div className="absolute w-[1441px] h-[961px] top-[94px] left-0">
-          <div className="w-[1441px] h-[485px] top-[476px] bg-[#f9bf3b] rotate-180 shadow-[0px_4px_4px_#00000040] absolute left-0" />
-          <img
-            className="w-full h-[484px] object-cover"
-            alt="Image"
-            src="/Vector Smith Half designer half entrepeneur.png"
-          />
-          <div className="absolute top-[611px] left-[68px] font-h1 font-[number:var(--h1-font-weight)] text-white text-[length:var(--h1-font-size)] tracking-[var(--h1-letter-spacing)] leading-[var(--h1-line-height)] [font-style:var(--h1-font-style)]">
-            UX Design
-            <br />
-            Portfolio
-          </div>
-          <div className="absolute top-[767px] left-[68px] font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
-            It is a website about my UX designs. It <br />
-            contains my projects
-          </div>
-          <img
-            className="absolute w-[357px] h-[436px] top-[501px] left-[779px] object-cover"
-            alt="Phone food"
-            src="/phone-food-1.png"
-          />
-          <div className="absolute w-[229px] h-[50px] top-[836px] left-[68px]">
-            <Link to="/ux-portfolio">
-              <Button
-                variant="outline"
-                className="relative w-[230px] h-[53px] -top-0.5 -left-0.5 rounded-[10px] border-[3px] border-solid border-white"
-              >
-                <span className="absolute top-2.5 left-[52px] font-h4 font-[number:var(--h4-font-weight)] text-white text-[length:var(--h4-font-size)] text-center tracking-[var(--h4-letter-spacing)] leading-[var(--h4-line-height)] [font-style:var(--h4-font-style)]">
-                  Check it out
-                </span>
-              </Button>
-            </Link>
+    <div className="bg-white w-full">
+      <div className="bg-white w-full relative">
+        {/* Hero Section - Designer & Entrepreneur */}
+        <div className="w-full relative bg-[#FDF8EF] py-16">
+          <div className="container mx-auto px-4">
+            <div className="flex justify-between items-center">
+              {/* Left text */}
+              <div className="w-1/3 text-left">
+                <h2 className="text-4xl md:text-6xl font-[700] font-['system-ui'] text-black">DESIGNER</h2>
+              </div>
+              
+              {/* Center image */}
+              <div className="w-1/3 flex justify-center">
+                <img
+                  src="/Design entrepeneur.png"
+                  alt="Designer and Entrepreneur"
+                  className="w-full max-w-[400px]"
+                />
+              </div>
+              
+              {/* Right text */}
+              <div className="w-1/3 text-right">
+                <h2 className="text-4xl md:text-6xl font-[700] font-['system-ui'] text-black">ENTREPRENEUR</h2>
+              </div>
+            </div>
           </div>
         </div>
-        {/* Second and Third Sections */}
-        <div className="absolute w-[1445px] h-[1311px] top-[1059px] left-0">
-          {/* Graphic Design Portfolio Section */}
-          <div className="absolute w-[1441px] h-[485px] top-0 left-0 bg-[#ff6b6b] rotate-180 shadow-[0px_4px_4px_#00000040]" />
-          {/* Entrepreneur Resume Section */}
-          <div className="w-[1441px] h-[485px] top-[478px] bg-[#202124] rotate-180 shadow-[0px_4px_4px_#00000040] absolute left-0" />
-          {/* Graphic Design Portfolio Content */}
-          {/* Imágenes moto y bici alineadas como en tu ejemplo */}
-          <div className="absolute top-[80px] left-[120px] flex flex-row gap-8 items-center">
-            <img
-              src="/MOTO.png"
-              alt="Moto"
-              className="w-[220px] h-[220px] object-contain"
-              style={{ marginTop: "40px" }}
-            />
-            <img
-              src="/BICYCLE.png"
-              alt="Bici"
-              className="w-[220px] h-[220px] object-contain -ml-10"
-              style={{ marginBottom: "100px" }}
-            />
-          </div>
-          <div className="absolute top-[120px] left-[873px] [font-family:'Londrina_Solid',Helvetica] font-normal text-white text-6xl tracking-[0] leading-[normal]">
-            Graphic Designs
-            <br />
-            Portfolio
-          </div>
-          <div className="top-[263px] left-[873px] text-black absolute font-text-1 font-[number:var(--text-1-font-weight)] text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
-            It is a website about my UX designs. It <br />
-            contains my projects
-          </div>
-          {/* Entrepreneur Resume Content */}
-          <div className="absolute top-[634px] left-[68px] [font-family:'Londrina_Solid',Helvetica] font-normal text-white text-6xl tracking-[0] leading-[normal]">
-            Entrepeneur
-            <br />
-            Resume
-          </div>
-          <div className="top-[776px] left-[68px] text-white absolute font-text-1 font-[number:var(--text-1-font-weight)] text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
-            It is a website about my UX designs. It <br />
-            contains my projects
-          </div>
 
-          {/* Buttons for Graphic Design and Entrepreneur sections */}
-          <div className="absolute w-[229px] h-[50px] top-[332px] left-[873px]">
-            <Link to="/portfolio">
-              <Button
-                variant="outline"
-                className="relative w-[230px] h-[53px] -top-0.5 -left-0.5 rounded-[10px] border-[3px] border-solid border-white"
-              >
-                <span className="absolute top-2.5 left-[52px] font-h4 font-[number:var(--h4-font-weight)] text-white text-[length:var(--h4-font-size)] text-center tracking-[var(--h4-letter-spacing)] leading-[var(--h4-line-height)] [font-style:var(--h4-font-style)]">
-                  Check it out
-                </span>
-              </Button>
-            </Link>
+        {/* UX Design Portfolio Section */}
+        <div className="w-full bg-[#f9bf3b] py-16">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              <div className="w-full md:w-1/2 mb-8 md:mb-0">
+                <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                  UX Design<br />Portfolio
+                </h2>
+                <p className="text-lg mb-6">
+                  It is a website about my UX designs. It<br />
+                  contains my projects
+                </p>
+                <Link to="/ux-portfolio">
+                  <Button className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#f9bf3b] px-8 py-3 rounded-lg">
+                    Check it out
+                  </Button>
+                </Link>
+              </div>
+              <div className="w-full md:w-1/2 flex justify-center">
+                <div className="w-full max-w-[400px] h-[400px] flex items-center justify-center">
+                  <img
+                    src="/phone-food-1.png"
+                    alt="UX Design Portfolio"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="absolute w-[229px] h-[50px] top-[845px] left-[68px]">
-            <Link to="/entrepeneur">
-              <Button
-                variant="outline"
-                className="relative w-[230px] h-[53px] -top-0.5 -left-0.5 rounded-[10px] border-[3px] border-solid border-white"
-              >
-                <span className="absolute top-2.5 left-[52px] font-h4 font-[number:var(--h4-font-weight)] text-white text-[length:var(--h4-font-size)] text-center tracking-[var(--h4-letter-spacing)] leading-[var(--h4-line-height)] [font-style:var(--h4-font-style)]">
-                  Check it out
-                </span>
-              </Button>
-            </Link>
+        </div>
+
+        {/* Graphic Designs Portfolio Section */}
+        <div className="w-full bg-[#ff6b6b] py-16">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col-reverse md:flex-row items-center justify-between">
+              <div className="w-full md:w-1/2 flex justify-center">
+                <div className="w-full max-w-[400px] h-[400px] flex items-center justify-center space-x-4">
+                  <img
+                    src="/MOTO.png"
+                    alt="Moto Delivery"
+                    className="w-[45%] h-auto object-contain transform translate-y-4"
+                  />
+                  <img
+                    src="/BICYCLE.png"
+                    alt="Bike Delivery"
+                    className="w-[45%] h-auto object-contain transform -translate-y-4"
+                  />
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 mb-8 md:mb-0">
+                <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                  Graphic Designs<br />Portfolio
+                </h2>
+                <p className="text-lg mb-6">
+                  It is a website about my Graphic Designs. It<br />
+                  contains my projects
+                </p>
+                <Link to="/portfolio">
+                  <Button className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#ff6b6b] px-8 py-3 rounded-lg">
+                    Check it out
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Entrepreneur Resume Section */}
+        <div className="w-full bg-[#202124] py-16">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              <div className="w-full md:w-1/2 mb-8 md:mb-0">
+                <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                  Entrepreneur<br />Resume
+                </h2>
+                <p className="text-white text-lg mb-6">
+                  It is a website about my Companies.
+                </p>
+                <Link to="/entrepeneur">
+                  <Button className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#202124] px-8 py-3 rounded-lg">
+                    Check it out
+                  </Button>
+                </Link>
+              </div>
+              <div className="w-full md:w-1/2 flex justify-center">
+                <div className="w-full max-w-[400px] h-[400px] flex items-center justify-center">
+                  <img
+                    src="/RocketMan.png"
+                    alt="Entrepreneur"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Let's Connect Section */}
+        <div className="w-full bg-white py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">Let's Connect</h2>
+            <p className="text-lg mb-8">
+              Get in touch if you have a new project or just to say hi! :)
+            </p>
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+export default Desktop;
