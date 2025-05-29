@@ -7,4 +7,8 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  preview: {
+    host: '0.0.0.0', // Escucha en todas las interfaces de red
+    port: 4173, // o el puerto que uses
+  },
 });
