@@ -129,14 +129,7 @@ export const Desktop = (): JSX.Element => {
         </div>
 
         {/* Let's Connect Section */}
-        <div className="w-full bg-white py-16">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Let's Connect</h2>
-            <p className="text-lg mb-8">
-              Get in touch if you have a new project or just to say hi! :)
-            </p>
-          </div>
-        </div>
+        
       </div>
     </div>
   );

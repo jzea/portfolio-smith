@@ -4,7 +4,7 @@ import {
   Twitter,
   Instagram,
   Linkedin,
-  MessageSquare,
+  MessageCircleMore,
 } from "lucide-react";
 
 const Footer: React.FC = () => {
@@ -26,12 +26,12 @@ const Footer: React.FC = () => {
             <Facebook size={24} />
           </a>
           <a
-            href="https://api.whatsapp.com"
+            href="https://api.whatsapp.com/send?phone=610401196617"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 hover:opacity-75 transition-opacity"
           >
-            <MessageSquare size={24} />
+            <MessageCircleMore size={24} />
           </a>
           <a
             href="https://twitter.com"
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
             <Instagram size={24} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/smithzea/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 hover:opacity-75 transition-opacity"

@@ -5,15 +5,15 @@ import { Button } from "./ui/button";
 const Header: React.FC = () => {
   // Header social icons (slightly different from footer)
   const headerSocialIcons = [
-    { src: "/vector-42.svg", alt: "Facebook", href: "https://facebook.com" },
-    { src: "/vector-33.svg", alt: "Twitter", href: "https://twitter.com" },
+    //{ src: "/vector-42.svg", alt: "Facebook", href: "https://facebook.com" },
+    { src: "/vector-33.svg", alt: "Whatsapp", href: "https://api.whatsapp.com/send?phone=610401196617" },
     {
       type: "container",
       bgColor: "bg-black",
-      content: { src: "/vector-44.svg", alt: "WhatsApp" },
-      href: "https://api.whatsapp.com",
+      content: { src: "/vector-44.svg", alt: "Twitter" },
+      href: "https://twitter.com",
     },
-    { src: "/instagram-logo-2016-1.svg", alt: "Instagram", href: "https://instagram.com" },
+    //{ src: "/instagram-logo-2016-1.svg", alt: "Instagram", href: "https://instagram.com" },
     { src: "/vector-47.svg", alt: "LinkedIn", href: "https://www.linkedin.com/in/smithzea/" },
   ];
 
