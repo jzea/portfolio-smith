@@ -72,7 +72,7 @@ const ContactPage: React.FC = () => {
                   <Mail className="w-5 h-5 text-blue-600 mt-1 mr-3" />
                   <div>
                     <h3 className="font-medium">Email</h3>
-                    <p className="text-gray-600">smith@example.com</p>
+                    <p className="text-gray-600">szea357@gmail.com</p>
                   </div>
                 </div>
                 
@@ -80,7 +80,7 @@ const ContactPage: React.FC = () => {
                   <Phone className="w-5 h-5 text-blue-600 mt-1 mr-3" />
                   <div>
                     <h3 className="font-medium">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+61 0401196617</p>
                   </div>
                 </div>
                 
@@ -88,7 +88,7 @@ const ContactPage: React.FC = () => {
                   <MapPin className="w-5 h-5 text-blue-600 mt-1 mr-3" />
                   <div>
                     <h3 className="font-medium">Address</h3>
-                    <p className="text-gray-600">Charlotte, North Carolina, USA</p>
+                    <p className="text-gray-600">Perth, Western Australia, Australia</p>
                   </div>
                 </div>
               </div>

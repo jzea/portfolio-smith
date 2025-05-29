@@ -21,7 +21,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-white w-full">
-      <div className="relative w-full h-[94px] bg-white shadow-[0px_7px_4px_#00000040]">
+      <div className="relative w-full h-[94px] bg-white shadow-[0px_2px_8px_rgba(0,0,0,0.1)]">
         <div className="container mx-auto px-4 h-full flex items-center justify-between">
           <div className="font-h2 font-[number:var(--h2-font-weight)] text-black text-[length:var(--h2-font-size)] tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] whitespace-nowrap [font-style:var(--h2-font-style)]">
             <Link to="/" className="hover:underline">
