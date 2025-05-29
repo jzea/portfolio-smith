@@ -107,7 +107,7 @@ export const Desktop = (): JSX.Element => {
                   Entrepreneur<br />Resume
                 </h2>
                 <p className="text-white text-lg mb-6">
-                  It is a website about my Companies.
+                  It is a website about my companies.
                 </p>
                 <Link to="/entrepeneur">
                   <Button className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#202124] px-8 py-3 rounded-lg">
