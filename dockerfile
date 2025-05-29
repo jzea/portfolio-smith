@@ -1,16 +1,16 @@
 FROM node:20-alpine
 
-# Crear directorio de trabajo
 WORKDIR /app
 
-# Copiar archivos
 COPY . .
 
-# Instalar dependencias
 RUN npm install
 
-# Exponer el puerto de Vite (por defecto 5173)
-EXPOSE 5173
+# Construir la app en modo producción
+RUN npm run build
 
-# Comando para levantar el servidor de desarrollo
-CMD ["npm", "run", "dev", "--", "--host"]
+# Exponer el puerto de preview (por defecto 4173)
+EXPOSE 4173
+
+# Servir el build en modo producción
+CMD ["npm", "run", "preview", "--", "--host"]
