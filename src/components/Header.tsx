@@ -5,15 +5,16 @@ import { Button } from "./ui/button";
 const Header: React.FC = () => {
   // Header social icons (slightly different from footer)
   const headerSocialIcons = [
-    { src: "/vector-42.svg", alt: "Vector" },
-    { src: "/vector-33.svg", alt: "Vector" },
+    { src: "/vector-42.svg", alt: "Facebook", href: "https://facebook.com" },
+    { src: "/vector-33.svg", alt: "Twitter", href: "https://twitter.com" },
     {
       type: "container",
       bgColor: "bg-black",
-      content: { src: "/vector-44.svg", alt: "Vector" },
+      content: { src: "/vector-44.svg", alt: "WhatsApp" },
+      href: "https://api.whatsapp.com",
     },
-    { src: "/instagram-logo-2016-1.svg", alt: "Instagram logo" },
-    { src: "/vector-47.svg", alt: "Vector" },
+    { src: "/instagram-logo-2016-1.svg", alt: "Instagram", href: "https://instagram.com" },
+    { src: "/vector-47.svg", alt: "LinkedIn", href: "https://www.linkedin.com/in/smithzea/" },
   ];
 
   // Navigation links
@@ -49,24 +50,39 @@ const Header: React.FC = () => {
           <div className="flex items-center gap-[25px]">
             {headerSocialIcons.map((icon, index) =>
               icon.type === "container" ? (
-                <div
+                <a
                   key={index}
-                  className="relative w-[39px] h-[39px] bg-black rounded-[19.5px]"
+                  href={icon.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-75 transition-opacity"
                 >
-                  <img
-                    className="absolute w-[23px] h-6 top-2 left-2"
-                    alt={icon.content.alt}
-                    src={icon.content.src}
-                  />
-                </div>
+                  <div
+                    className="relative w-[39px] h-[39px] bg-black rounded-[19.5px]"
+                  >
+                    <img
+                      className="absolute w-[23px] h-6 top-2 left-2"
+                      alt={icon.content.alt}
+                      src={icon.content.src}
+                    />
+                  </div>
+                </a>
               ) : (
-                <Button key={index} variant="ghost" className="p-0 h-auto w-auto">
-                  <img
-                    className="relative w-[39px] h-[39px]"
-                    alt={icon.alt}
-                    src={icon.src}
-                  />
-                </Button>
+                <a
+                  key={index}
+                  href={icon.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-75 transition-opacity"
+                >
+                  <Button variant="ghost" className="p-0 h-auto w-auto">
+                    <img
+                      className="relative w-[39px] h-[39px]"
+                      alt={icon.alt}
+                      src={icon.src}
+                    />
+                  </Button>
+                </a>
               )
             )}
           </div>
