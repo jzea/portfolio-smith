@@ -70,7 +70,7 @@ const PortfolioPage: React.FC = () => {
     },
   ];
   return (
-    <div className="bg-white flex flex-row justify-center w-full">
+    <div className="bg-white flex flex-row justify-center w-full pt-12">
       <div className="bg-white overflow-hidden w-[1440px] relative">
         {/* Portfolio Grid */}
         <div className="grid grid-cols-3 gap-x-[75px] gap-y-[35px] px-[94px] pt-[164px]">

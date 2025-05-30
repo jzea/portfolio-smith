@@ -5,27 +5,12 @@ import { Separator } from "../components/ui/separator";
 const AboutPage: React.FC = () => {
   // Skills data for the bar chart
   const skillsData = [
-    { name: "Web Design", level: "Master", height: "273px", color: "#f9bf3b" },
-    {
-      name: "Graphic Design",
-      level: "Master",
-      height: "273px",
-      color: "#ff6b6b",
-    },
-    {
-      name: "Community\nManager",
-      level: "Proficient",
-      height: "201px",
-      color: "#f79a3c",
-    },
-    { name: "Entrepeneur", level: "Expert", height: "231px", color: "#202124" },
-    { name: "Gym", level: "Proficient", height: "201px", color: "#0048ff" },
-    {
-      name: "Video Games",
-      level: "Familiar",
-      height: "132px",
-      color: "#ffe100",
-    },
+    { name: "UX/UI Design", level: "Expert", color: "#f9bf3b" },
+    { name: "Graphic & Web Design", level: "Expert", color: "#ff6b6b" },
+    { name: "Community Manager", level: "Proficient", color: "#f79a3c" },
+    { name: "Entrepeneur", level: "ExpertProficient", color: "#202124" },
+    { name: "Gym", level: "Proficient", color: "#0048ff" },
+    { name: "Video Games", level: "Familiar", color: "#ffe100" },
   ];
 
   // Designer skills data
@@ -51,101 +36,76 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white flex flex-row justify-center w-full">
-      <div className="bg-white overflow-hidden w-[1440px] h-[3025px] relative">
-        {/* Skills Section */}
-        <Card className="absolute w-[1441px] h-[645px] top-[1494px] -left-px shadow-[0px_4px_4px_#00000040]">
+    <div className="bg-white flex flex-row justify-center w-full pt-12">
+      <div className="bg-white overflow-hidden w-[1440px] h-[2200px] relative">
+        {/* About Me Section */}
+        <Card className="absolute w-full max-w-[1441px] h-[747px] top-[98px] -left-px bg-white border-0 shadow-none">
           <CardContent className="p-0 h-full relative">
-            <h2 className="absolute w-[243px] top-[38px] left-[600px] font-h2 font-[number:var(--h2-font-weight)] text-black text-[length:var(--h2-font-size)] tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)]">
-              Skills
+            <h2 className="absolute w-[281px] top-[124px] left-[101px] [font-family:'Amaranth',Helvetica] font-bold text-black text-[40px] tracking-[0] leading-[normal] whitespace-nowrap">
+              About me
             </h2>
 
-            <div className="absolute w-[1262px] h-[449px] top-[126px] left-[101px]">
-              {/* Skill level labels */}
-              <div className="absolute w-[150px] top-0 left-0 font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
-                Master
-              </div>
-              <div className="absolute w-[150px] top-[72px] left-0 font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
-                Expert
-              </div>
-              <div className="absolute w-[150px] top-[43px] left-0 font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
-                Proficient
-              </div>
-              <div className="absolute w-[150px] top-[115px] left-0 font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
-                Familiar
-              </div>
-              <div className="absolute w-[150px] top-[187px] left-0 font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
-                Beginner
-              </div>
+            <p className="absolute w-full max-w-[625px] top-[214px] left-[101px] font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
+              I&#39;m a UX designer based in Perth, Australia.
+              <br />
+              <br />
+              Since 2019, I enjoy developing intuitive interfaces basically I
+              love making people&#39;s lives easy. When I&#39;m not designing,
+              you&#39;ll find me cooking, thinking a business idea, at the gym
+              or playing video games.
+            </p>
 
-              {/* Horizontal lines */}
-              <Separator className="absolute w-[1240px] h-0.5 top-[29px] left-0" />
-              <Separator className="absolute w-[1240px] h-0.5 top-0 left-0" />
-              <Separator className="absolute w-[1240px] h-0.5 top-36 left-0" />
-              <Separator className="absolute w-[1240px] h-0.5 top-[216px] left-0" />
-              <Separator className="absolute w-[1240px] h-0.5 top-[72px] left-0" />
+            {/* Profile image */}
+            <div className="absolute w-[469px] h-[355px] top-[125px] left-[846px] rotate-180">
+              <img
+                className="absolute w-[477px] h-[363px] -top-2 -left-1 -rotate-180 object-cover rounded-[20px]"
+                alt="Image"
+                src="/4.jpg"
+              />
+            </div>
 
-              {/* Skill bars */}
-              <div className="absolute w-[1240px] h-[277px] top-[101px] left-0">
-                {skillsData.map((skill, index) => (
-                  <div
-                    key={index}
-                    className={`absolute w-[124px] h-[${skill.height}] top-${
-                      skill.level === "Master"
-                        ? "px"
-                        : skill.level === "Expert"
-                        ? "[43px]"
-                        : skill.level === "Proficient"
-                        ? "[73px]"
-                        : "[145px]"
-                    } left-[${181 + index * 179}px] bg-[${
-                      skill.color
-                    }] rounded-[9px_9px_0px_0px]`}
-                    style={{
-                      height: skill.height,
-                      backgroundColor: skill.color,
-                      left: `${181 + index * 179}px`,
-                      top:
-                        skill.level === "Master"
-                          ? "1px"
-                          : skill.level === "Expert"
-                          ? "43px"
-                          : skill.level === "Proficient"
-                          ? "73px"
-                          : "145px",
-                    }}
-                  />
-                ))}
+            {/* Gallery images */}
+            <div className="absolute flex flex-wrap gap-4 w-full max-w-[1200px] top-[538px] left-[101px]">
+              <div className="w-[140px] h-[140px] rotate-180">
+                <img
+                  className="w-full h-full -rotate-180 object-cover rounded-[20px]"
+                  alt="Image"
+                  src="/4.jpg"
+                />
               </div>
-
-              {/* Skill names */}
-              {skillsData.map((skill, index) => (
-                <div
-                  key={index}
-                  className={`absolute top-[395px] left-[${
-                    181 + index * 179
-                  }px] font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] ${
-                    skill.name.includes("\n") ? "text-center" : ""
-                  } tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]`}
-                  style={{ left: `${181 + index * 179}px` }}
-                >
-                  {skill.name.includes("\n") ? (
-                    <>
-                      Community
-                      <br />
-                      Manager
-                    </>
-                  ) : (
-                    skill.name
-                  )}
-                </div>
-              ))}
+              <div className="w-[140px] h-[140px] rotate-180">
+                <img
+                  className="w-full h-full -rotate-180 object-cover rounded-[20px]"
+                  alt="Image"
+                  src="/3.jpg"
+                />
+              </div>
+              <div className="w-[140px] h-[140px] rotate-180">
+                <img
+                  className="w-full h-full -rotate-180 object-cover rounded-[20px]"
+                  alt="Image"
+                  src="/2.jpg"
+                />
+              </div>
+              <div className="w-[140px] h-[140px] rotate-180">
+                <img
+                  className="w-full h-full -rotate-180 object-cover rounded-[20px]"
+                  alt="Image"
+                  src="/1.jpg"
+                />
+              </div>
+              <div className="w-[140px] h-[140px] rotate-180">
+                <div className="h-[140px] bg-[#c4c4c4] rounded-[20px] rotate-180" />
+              </div>
             </div>
           </CardContent>
         </Card>
 
+        {/* Divider between About Me and Designer/Entrepreneur */}
+        <Separator className="absolute w-full h-0.5 top-[795px] left-0 bg-gray-200" />
+
         {/* Designer/Entrepreneur Section */}
-        <Card className="absolute w-[1441px] h-[645px] top-[845px] -left-px shadow-[0px_4px_4px_#00000040]">
+        <Card className="absolute w-[1441px] h-[645px] top-[845px] -left-px bg-white border-0 shadow-none">
           <CardContent className="p-0 h-full relative">
             <h2 className="top-[113px] left-[99px] absolute font-h2 font-[number:var(--h2-font-weight)] text-black text-[length:var(--h2-font-size)] tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)]">
               Part <br />
@@ -188,68 +148,53 @@ const AboutPage: React.FC = () => {
           </CardContent>
         </Card>
 
-        {/* About Me Section */}
-        <Card className="absolute w-[1441px] h-[747px] top-[98px] -left-px shadow-[0px_4px_4px_#00000040]">
+        {/* Divider between Designer/Entrepreneur and Skills */}
+        <Separator className="absolute w-full h-0.5 top-[1444px] left-0 bg-gray-200" />
+
+        {/* Skills Section */}
+        <Card className="absolute w-[1441px] h-[400px] top-[1494px] -left-px bg-white border-0 shadow-none">
           <CardContent className="p-0 h-full relative">
-            <h2 className="absolute w-[281px] top-[124px] left-[101px] [font-family:'Amaranth',Helvetica] font-bold text-black text-[40px] tracking-[0] leading-[normal] whitespace-nowrap">
-              About me
+            <h2 className="absolute w-[243px] top-[38px] left-[600px] [font-family:'Amaranth',Helvetica] font-bold text-black text-[40px] tracking-[0] leading-[normal]">
+              Skills
             </h2>
 
-            <p className="absolute w-[625px] top-[214px] left-[101px] font-text-1 font-[number:var(--text-1-font-weight)] text-black text-[length:var(--text-1-font-size)] tracking-[var(--text-1-letter-spacing)] leading-[var(--text-1-line-height)] [font-style:var(--text-1-font-style)]">
-              I&#39;m a UX designer based in Perth, Australia.
-              <br />
-              <br />
-              Since 2019, I enjoy developing intuitive interfaces basically I
-              love making people&#39;s lives easy. When I&#39;m not designing,
-              you&#39;ll find me cooking, thinking a business idea, at the gym
-              or playing video games.
-            </p>
+            <div className="absolute w-[1262px] h-[449px] top-[126px] left-[101px]">
+              <div className="relative w-full h-full">
+                {/* Level labels and horizontal lines */}
+                {["Master", "Expert", "Proficient", "Familiar", "Beginner"].map((level, index) => (
+                  <div key={level} className="absolute w-full" style={{ top: `${index * 100}px` }}>
+                    <div className="absolute left-0 text-black font-text-1 text-[16px]">{level}</div>
+                    <div className="absolute left-[150px] right-0 h-[1px] bg-gray-200" />
+                  </div>
+                ))}
 
-            {/* Profile image */}
-            <div className="absolute w-[469px] h-[355px] top-[125px] left-[846px] rotate-180">
-              <img
-                className="absolute w-[477px] h-[363px] -top-2 -left-1 -rotate-180 object-cover"
-                alt="Image"
-                src="/image-1.png"
-              />
-            </div>
-
-            {/* Gallery images */}
-            <div className="absolute w-[140px] h-[140px] top-[538px] left-[101px] rotate-180">
-              <img
-                className="absolute w-[148px] h-[148px] -top-2 -left-1 -rotate-180 object-cover"
-                alt="Image"
-                src="/4.jpg"
-              />
-            </div>
-            <div className="absolute w-[140px] h-[140px] top-[538px] left-[312px] rotate-180">
-              <img
-                className="absolute w-[148px] h-[148px] -top-2 -left-1 -rotate-180 object-cover"
-                alt="Image"
-                src="/3.jpg"
-              />
-            </div>
-            <div className="absolute w-[140px] h-[140px] top-[538px] left-[525px] rotate-180">
-              <img
-                className="absolute w-[148px] h-[148px] -top-2 -left-1 -rotate-180 object-cover"
-                alt="Image"
-                src="/2.jpg"
-              />
-            </div>
-            <div className="absolute w-[140px] h-[140px] top-[538px] left-[740px] rotate-180">
-              <img
-                className="absolute w-[148px] h-[148px] -top-2 -left-1 -rotate-180 object-cover"
-                alt="Image"
-                src="/1.jpg"
-              />
-            </div>
-            <div className="absolute w-[140px] h-[140px] top-[538px] left-[953px] rotate-180">
-              <div className="h-[140px] bg-[#c4c4c4] rounded-[20px] rotate-180 shadow-[0px_4px_4px_#00000040]" />
+                {/* Skill bars */}
+                <div className="absolute left-[150px] right-0 top-0 h-full flex items-end justify-between px-4">
+                  {skillsData.map((skill, index) => (
+                    <div key={index} className="relative" style={{ width: '120px' }}>
+                      <div 
+                        className="w-full rounded-[10px]"
+                        style={{
+                          backgroundColor: skill.color,
+                          height: skill.level === "Expert" ? "200px" :
+                                  skill.level === "ExpertProficient" ? "170px" :
+                                  skill.level === "Proficient" ? "140px" :
+                                  skill.level === "Familiar" ? "80px" : "40px",
+                          transition: 'height 0.3s ease'
+                        }}
+                      />
+                      <div className="absolute top-full mt-4 text-center w-full text-black font-text-1 text-[14px] whitespace-pre-wrap">
+                        {skill.name}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* Header */}
+        
       </div>
     </div>
   );
