@@ -8,12 +8,22 @@ export const Desktop = (): JSX.Element => {
         {/* Hero Section - Designer & Entrepreneur */}
         <div className="w-full relative bg-[#FDF8EF] py-16">
           <div className="container mx-auto px-4">
-            <div className="flex justify-between items-center">
+            {/* Mobile layout */}
+            <div className="flex flex-col items-center justify-center text-center md:hidden">
+              <h2 className="text-2xl font-bold text-black mb-4">DESIGNER</h2>
+              <img
+                src="/Design entrepeneur.png"
+                alt="Designer and Entrepreneur"
+                className="w-40 mb-4"
+              />
+              <h2 className="text-2xl font-bold text-black mt-2">ENTREPRENEUR</h2>
+            </div>
+            {/* Desktop/tablet layout */}
+            <div className="hidden md:flex justify-between items-center">
               {/* Left text */}
               <div className="w-1/3 text-left">
                 <h2 className="text-4xl md:text-6xl font-[700] font-['system-ui'] text-black">DESIGNER</h2>
               </div>
-              
               {/* Center image */}
               <div className="w-1/3 flex justify-center">
                 <img
@@ -22,7 +32,6 @@ export const Desktop = (): JSX.Element => {
                   className="w-full max-w-[400px]"
                 />
               </div>
-              
               {/* Right text */}
               <div className="w-1/3 text-right">
                 <h2 className="text-4xl md:text-6xl font-[700] font-['system-ui'] text-black">ENTREPRENEUR</h2>
