@@ -9,22 +9,22 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white py-12">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-2xl font-bold mb-4">Let's Connect</h2>
-        <p className="text-gray-700 mb-8">
+    <footer className="bg-white py-8 sm:py-10 md:py-12">
+      <div className="max-w-4xl mx-auto text-center px-4">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">Let's Connect</h2>
+        <p className="text-gray-700 text-base sm:text-lg mb-6 sm:mb-8">
           Get in touch if you have a new project or just to say hi! :)
         </p>
 
-        <div className="flex justify-center space-x-6">
-          <a
+        <div className="flex flex-row justify-center space-x-6">
+          {/* <a
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 hover:opacity-75 transition-opacity"
           >
             <Facebook size={24} />
-          </a>
+          </a> */}
           <a
             href="https://api.whatsapp.com/send?phone=610401196617"
             target="_blank"
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
           >
             <MessageCircleMore size={24} />
           </a>
-          <a
+          {/* <a
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
             className="p-2 hover:opacity-75 transition-opacity"
           >
             <Instagram size={24} />
-          </a>
+          </a> */}
           <a
             href="https://www.linkedin.com/in/smithzea/"
             target="_blank"

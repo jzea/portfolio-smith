@@ -45,10 +45,18 @@ export const Desktop = (): JSX.Element => {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="w-full md:w-1/2 mb-8 md:mb-0">
-                <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                {/* Mobile text */}
+                <h2 className="text-2xl font-bold text-white mb-2 md:hidden">
+                  UX Design Portfolio
+                </h2>
+                <p className="text-base mb-4 md:hidden">
+                  My UX design projects
+                </p>
+                {/* Desktop text */}
+                <h2 className="hidden md:block text-4xl md:text-6xl font-bold text-white mb-4">
                   UX Design<br />Portfolio
                 </h2>
-                <p className="text-lg mb-6">
+                <p className="hidden md:block text-lg mb-6">
                   It is a website about my UX designs. It<br />
                   contains my projects
                 </p>
@@ -59,7 +67,7 @@ export const Desktop = (): JSX.Element => {
                 </Link>
               </div>
               <div className="w-full md:w-1/2 flex justify-center">
-                <div className="w-full max-w-[400px] h-[400px] flex items-center justify-center">
+                <div className="w-[160px] h-[160px] md:w-[400px] md:h-[400px] flex items-center justify-center">
                   <img
                     src="/phone-food-1.png"
                     alt="UX Design Portfolio"
@@ -76,24 +84,32 @@ export const Desktop = (): JSX.Element => {
           <div className="container mx-auto px-4">
             <div className="flex flex-col-reverse md:flex-row items-center justify-between">
               <div className="w-full md:w-1/2 flex justify-center">
-                <div className="w-full max-w-[400px] h-[400px] flex items-center justify-center space-x-4">
+                <div className="w-[160px] h-[160px] md:w-[400px] md:h-[400px] flex items-center justify-center space-x-2 md:space-x-4">
                   <img
                     src="/MOTO.png"
                     alt="Moto Delivery"
-                    className="w-[45%] h-auto object-contain transform translate-y-4"
+                    className="w-[45%] h-auto object-contain transform translate-y-2 md:translate-y-4"
                   />
                   <img
                     src="/BICYCLE.png"
                     alt="Bike Delivery"
-                    className="w-[45%] h-auto object-contain transform -translate-y-4"
+                    className="w-[45%] h-auto object-contain transform -translate-y-2 md:-translate-y-4"
                   />
                 </div>
               </div>
               <div className="w-full md:w-1/2 mb-8 md:mb-0">
-                <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                {/* Mobile text */}
+                <h2 className="text-2xl font-bold text-white mb-2 md:hidden">
+                  Graphic Designs Portfolio
+                </h2>
+                <p className="text-base mb-4 md:hidden">
+                  My graphic design projects
+                </p>
+                {/* Desktop text */}
+                <h2 className="hidden md:block text-4xl md:text-6xl font-bold text-white mb-4">
                   Graphic Designs<br />Portfolio
                 </h2>
-                <p className="text-lg mb-6">
+                <p className="hidden md:block text-lg mb-6">
                   It is a website about my Graphic Designs. It<br />
                   contains my projects
                 </p>
@@ -112,10 +128,18 @@ export const Desktop = (): JSX.Element => {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="w-full md:w-1/2 mb-8 md:mb-0">
-                <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                {/* Mobile text */}
+                <h2 className="text-2xl font-bold text-white mb-2 md:hidden">
+                  Entrepreneur Resume
+                </h2>
+                <p className="text-base text-white mb-4 md:hidden">
+                  My companies
+                </p>
+                {/* Desktop text */}
+                <h2 className="hidden md:block text-4xl md:text-6xl font-bold text-white mb-4">
                   Entrepreneur<br />Resume
                 </h2>
-                <p className="text-white text-lg mb-6">
+                <p className="hidden md:block text-white text-lg mb-6">
                   It is a website about my companies.
                 </p>
                 <Link to="/entrepeneur">
@@ -125,7 +149,7 @@ export const Desktop = (): JSX.Element => {
                 </Link>
               </div>
               <div className="w-full md:w-1/2 flex justify-center">
-                <div className="w-full max-w-[400px] h-[400px] flex items-center justify-center">
+                <div className="w-[160px] h-[160px] md:w-[400px] md:h-[400px] flex items-center justify-center">
                   <img
                     src="/RocketMan.png"
                     alt="Entrepreneur"
