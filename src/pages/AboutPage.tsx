@@ -144,7 +144,7 @@ const AboutPage: React.FC = () => {
               className="absolute w-[385px] h-[446px] top-[102px] left-[467px]"
               alt="Ellipse"
               src="/ellipse-4.svg"
-            />
+            /> 
           </CardContent>
         </Card>
 
@@ -170,24 +170,33 @@ const AboutPage: React.FC = () => {
 
                 {/* Skill bars */}
                 <div className="absolute left-[150px] right-0 top-0 h-full flex items-end justify-between px-4">
-                  {skillsData.map((skill, index) => (
-                    <div key={index} className="relative" style={{ width: '120px' }}>
-                      <div 
-                        className="w-full rounded-[10px]"
-                        style={{
-                          backgroundColor: skill.color,
-                          height: skill.level === "Expert" ? "200px" :
-                                  skill.level === "ExpertProficient" ? "170px" :
-                                  skill.level === "Proficient" ? "140px" :
-                                  skill.level === "Familiar" ? "80px" : "40px",
-                          transition: 'height 0.3s ease'
-                        }}
-                      />
-                      <div className="absolute top-full mt-4 text-center w-full text-black font-text-1 text-[14px] whitespace-pre-wrap">
-                        {skill.name}
+                  {skillsData.map((skill, index) => {
+                    let barHeight = 49; // Default for Beginner
+                    if (skill.name === "UX/UI Design" || skill.name === "Graphic & Web Design") {
+                      barHeight = 349; // Expert
+                    } else if (skill.name === "Community Manager" || skill.name === "Gym") {
+                      barHeight = 249; // Proficient
+                    } else if (skill.name === "Entrepeneur") {
+                      barHeight = 299; // Between Expert and Proficient
+                    } else if (skill.name === "Video Games") {
+                      barHeight = 149; // Familiar
+                    }
+                    return (
+                      <div key={index} className="relative" style={{ width: '120px' }}>
+                        <div 
+                          className="w-full rounded-[10px]"
+                          style={{
+                            backgroundColor: skill.color,
+                            height: `${barHeight}px`,
+                            transition: 'height 0.3s ease'
+                          }}
+                        />
+                        <div className="absolute top-full mt-4 text-center w-full text-black font-text-1 text-[14px] whitespace-pre-wrap">
+                          {skill.name}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </div>

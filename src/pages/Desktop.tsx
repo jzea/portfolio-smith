@@ -41,16 +41,16 @@ export const Desktop = (): JSX.Element => {
         </div>
 
         {/* UX Design Portfolio Section */}
-        <div className="w-full bg-[#f9bf3b] py-16">
+        <div className="w-full bg-[#f9bf3b] py-8 md:py-16">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="w-full md:w-1/2 mb-8 md:mb-0">
+              <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mb-8 md:mb-0">
                 {/* Mobile text */}
                 <h2 className="text-2xl font-bold text-white mb-2 md:hidden">
                   UX Design Portfolio
                 </h2>
                 <p className="text-base mb-4 md:hidden">
-                  My UX design projects
+                  It is a website about my UX designs. It contains my projects
                 </p>
                 {/* Desktop text */}
                 <h2 className="hidden md:block text-4xl md:text-6xl font-bold text-white mb-4">
@@ -61,7 +61,7 @@ export const Desktop = (): JSX.Element => {
                   contains my projects
                 </p>
                 <Link to="/ux-portfolio">
-                  <Button className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#f9bf3b] px-8 py-3 rounded-lg">
+                  <Button className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#f9bf3b] px-8 py-3 rounded-lg mt-2 md:mt-0">
                     Check it out
                   </Button>
                 </Link>
@@ -80,7 +80,7 @@ export const Desktop = (): JSX.Element => {
         </div>
 
         {/* Graphic Designs Portfolio Section */}
-        <div className="w-full bg-[#ff6b6b] py-16">
+        <div className="w-full bg-[#ff6b6b] py-8 md:py-16">
           <div className="container mx-auto px-4">
             <div className="flex flex-col-reverse md:flex-row items-center justify-between">
               <div className="w-full md:w-1/2 flex justify-center">
@@ -97,13 +97,13 @@ export const Desktop = (): JSX.Element => {
                   />
                 </div>
               </div>
-              <div className="w-full md:w-1/2 mb-8 md:mb-0">
+              <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mb-8 md:mb-0">
                 {/* Mobile text */}
                 <h2 className="text-2xl font-bold text-white mb-2 md:hidden">
-                  Graphic Designs Portfolio
+                  Graphic Design Portfolio
                 </h2>
                 <p className="text-base mb-4 md:hidden">
-                  My graphic design projects
+                  It is a website about my UX designs. It contains my projects
                 </p>
                 {/* Desktop text */}
                 <h2 className="hidden md:block text-4xl md:text-6xl font-bold text-white mb-4">
@@ -114,7 +114,7 @@ export const Desktop = (): JSX.Element => {
                   contains my projects
                 </p>
                 <Link to="/portfolio">
-                  <Button className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#ff6b6b] px-8 py-3 rounded-lg">
+                  <Button className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#ff6b6b] px-8 py-3 rounded-lg mt-2 md:mt-0">
                     Check it out
                   </Button>
                 </Link>
@@ -124,16 +124,16 @@ export const Desktop = (): JSX.Element => {
         </div>
 
         {/* Entrepreneur Resume Section */}
-        <div className="w-full bg-[#202124] py-16">
+        <div className="w-full bg-[#202124] py-8 md:py-16">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="w-full md:w-1/2 mb-8 md:mb-0">
+              <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mb-8 md:mb-0">
                 {/* Mobile text */}
                 <h2 className="text-2xl font-bold text-white mb-2 md:hidden">
                   Entrepreneur Resume
                 </h2>
                 <p className="text-base text-white mb-4 md:hidden">
-                  My companies
+                  It is a website about my Companies.
                 </p>
                 {/* Desktop text */}
                 <h2 className="hidden md:block text-4xl md:text-6xl font-bold text-white mb-4">
@@ -143,7 +143,7 @@ export const Desktop = (): JSX.Element => {
                   It is a website about my companies.
                 </p>
                 <Link to="/entrepeneur">
-                  <Button className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#202124] px-8 py-3 rounded-lg">
+                  <Button className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#202124] px-8 py-3 rounded-lg mt-2 md:mt-0">
                     Check it out
                   </Button>
                 </Link>
