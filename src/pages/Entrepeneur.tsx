@@ -17,26 +17,25 @@ export const Entrepeneur = (): JSX.Element => {
   ];
 
   return (
-    <div className="bg-white flex flex-row justify-center w-full">
-      <div className="bg-white overflow-hidden w-[1440px] relative">
+    <div className="bg-white flex flex-row justify-center w-full pt-6 md:pt-12">
+      <div className="bg-white overflow-hidden w-full md:w-[1440px] relative">
         {/* Portfolio Grid */}
-        <div className="grid grid-cols-3 gap-x-[76px] gap-y-[30px] px-[94px] pt-[164px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-x-[75px] md:gap-y-[35px] px-4 md:px-[94px] pt-8 md:pt-[164px]">
           {portfolioProjects.map((project) => (
-            <Card
-              key={project.id}
-              className="w-[367px] border-none shadow-none"
-            >
-              <CardContent className="p-0">
-                <img
-                  className="w-full h-[285px] object-cover rounded-md"
-                  alt={project.alt}
-                  src={project.image}
-                />
-                <div className="mt-8 mb-12 text-center font-h3 font-[number:var(--h3-font-weight)] text-black text-[length:var(--h3-font-size)] tracking-[var(--h3-letter-spacing)] leading-[var(--h3-line-height)] [font-style:var(--h3-font-style)]">
-                  {project.name}
-                </div>
-              </CardContent>
-            </Card>
+            <div key={project.id} className="flex flex-col items-center w-full md:w-[367px]">
+              <Card className="w-full md:w-[367px] border-none shadow-none rounded-2xl overflow-hidden">
+                <CardContent className="p-0">
+                  <img
+                    className="w-full h-[200px] md:h-[284px] object-cover rounded-2xl"
+                    alt={project.alt}
+                    src={project.image}
+                  />
+                </CardContent>
+              </Card>
+              <div className="font-h3 text-2xl md:text-[35px] font-[600] text-black mt-2 text-center w-full">
+                {project.name}
+              </div>
+            </div>
           ))}
         </div>
       </div>
