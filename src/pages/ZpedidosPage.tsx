@@ -12,7 +12,7 @@ const ZpedidosPage: React.FC = () => {
     },
     {
       src: "/86394231-481775586062137-8416117609128263680-n.png",
-      alt: "Element",
+      alt: "Element.",
     },
     // Second row
     {
